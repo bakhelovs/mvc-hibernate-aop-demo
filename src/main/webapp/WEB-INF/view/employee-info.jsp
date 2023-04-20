@@ -7,6 +7,10 @@
 <h2>Employee info</h2>
 <br>
 <form:form action="saveEmployee" modelAttribute="employee">
+<%--    скрытое поле id чтобы по нажатию на кнопку ОК мы знали id какого работника обновлять--%>
+    <form:hidden path="id"/>
+
+
     Name <form:input path="name"/>
     <br><br>
     Surname <form:input path="surname"/>
