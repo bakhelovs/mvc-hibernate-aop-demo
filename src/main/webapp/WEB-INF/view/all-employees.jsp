@@ -6,7 +6,7 @@
 <h2>All Employees</h2>
 <br>
 <table>
-<%--    th - table heater = шапка таблицы--%>
+    <%--    th - table heater = шапка таблицы--%>
     <tr>
         <th>Name</th>
         <th>Surname</th>
@@ -17,13 +17,16 @@
     <c:forEach var="emp" items="${allEmps}">
 
 
-    <tr>
-        <td>${emp.name}</td>
-        <td>${emp.surname}</td>
-        <td>${emp.department}</td>
-        <td>${emp.salary}</td>
-    </tr>
+        <tr>
+            <td>${emp.name}</td>
+            <td>${emp.surname}</td>
+            <td>${emp.department}</td>
+            <td>${emp.salary}</td>
+        </tr>
     </c:forEach>
 </table>
+<br>
+<input type="submit" value="Add"
+       onclick="window.location.href = 'addNewEmployee'">
 </body>
 </html>

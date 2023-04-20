@@ -16,10 +16,15 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     @Autowired
     private SessionFactory sessionFactory;
 
-    @Transactional
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
 
         return session.createQuery("from Employee", Employee.class).getResultList();
+    }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(employee);
     }
 }
